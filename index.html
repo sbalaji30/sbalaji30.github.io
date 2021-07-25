@@ -53,6 +53,15 @@ svg.selectAll("myline")
     .attr("y2", y(0))
     .attr("stroke", "grey")
 
+svg.selectAll("mycircle")
+  .data(data)
+  .enter()
+  .append("circle")
+    .attr("cx", function(d) { return x(d.date); })
+    .attr("cy", function(d) { return y(d.cases); })
+    .attr("r", "1")
+    .style("fill", "#69b3a2")
+    .attr("stroke", "black")
 })
 
 </script>
