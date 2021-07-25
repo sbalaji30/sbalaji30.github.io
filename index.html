@@ -12,7 +12,7 @@
 <script>
 
 var margin = {top:10, right:30, bottom:60, left:100},
-    width = 1750,
+    width = 1700,
     height = 500;
 
 var svg = d3.select("#new_reported_cases")
@@ -32,9 +32,6 @@ var x = d3.scaleBand()
 svg.append("g")
    .attr("transform", "translate(0," + height + ")")
    .call(d3.axisBottom(x))
-   .selectAll("text")
-     .attr("transform","translate(-10,0)rotate(-45)")
-     .style("text-anchor","end");
 
 //Y axis
 var y = d3.scaleLinear()
