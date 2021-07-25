@@ -11,9 +11,9 @@
 
 <script>
 
-var margin = {top:10, right:30, bottom:90, left:40},
-    width = 460 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var margin = {top:100, right:300, bottom:900, left:400},
+    width = 4600 - margin.left - margin.right,
+    height = 5000 - margin.top - margin.bottom;
 
 var svg = d3.select("#new_reported_cases")
     .append("svg")
@@ -38,7 +38,7 @@ svg.append("g")
 
 //Y axis
 var y = d3.scaleLinear()
-   .domain([0,13000])
+   .domain([0,35000000])
    .range([height,0]);
 svg.append("g")
    .call(d3.axisLeft(y));
