@@ -71,7 +71,7 @@ svg.append("g")
       .style("opacity", 0)
     d3.select(this)
       .style("stroke", "red")
-      .style("opacity", 0.5)
+      .style("opacity", 0.6)
   }
 
 // Lines
@@ -84,6 +84,7 @@ svg.selectAll("myline")
     .attr("y1", function(d) { return y(d.newCases); })
     .attr("y2", y(0))
     .attr("stroke", "red")
+    .attr("opacity", 0.6)
   .on("mouseover", mouseover)
   .on("mousemove", mousemove)
   .on("mouseleave", mouseleave)
