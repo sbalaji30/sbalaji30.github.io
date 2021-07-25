@@ -22,7 +22,7 @@ var svg = d3.select("#new_reported_cases")
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("https://raw.githubusercontent.com/sbalaji30/sbalaji30.github.io/main/CoronavirusUSDailyCasesAndDeaths.csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/sbalaji30/sbalaji30.github.io/main/NarrativeVisualizationProjectDataset.csv", function(data) {
 
 //X axis
 var x = d3.scaleBand()
@@ -38,7 +38,7 @@ svg.append("g")
 
 //Y axis
 var y = d3.scaleLinear()
-   .domain([0,35000000])
+   .domain([0,301000])
    .range([height,0]);
 svg.append("g")
    .call(d3.axisLeft(y));
@@ -50,7 +50,7 @@ svg.selectAll("myline")
   .append("line")
     .attr("x1", function(d) { return x(d.date); })
     .attr("x2", function(d) { return x(d.date); })
-    .attr("y1", function(d) { return y(d.cases); })
+    .attr("y1", function(d) { return y(d.newCases); })
     .attr("y2", y(0))
     .attr("stroke", "grey")
 
@@ -60,7 +60,7 @@ svg.selectAll("mycircle")
   .enter()
   .append("circle")
     .attr("cx", function(d) { return x(d.date); })
-    .attr("cy", function(d) { return y(d.cases); })
+    .attr("cy", function(d) { return y(d.newCases); })
     .attr("r", "4")
     .style("fill", "#69b3a2")
     .attr("stroke", "black")
