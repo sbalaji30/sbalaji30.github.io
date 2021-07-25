@@ -32,7 +32,8 @@ var x = d3.scaleBand()
 svg.append("g")
    .attr("transform", "translate(0," + height + ")")
    .call(d3.axisBottom(x).tickSize(0))
-   .selectAll("text").remove();
+   .selectAll("text").filter(function(d) { return d.date.match(([1-9]|1[0-2])\/([2-9]|1[0-9]|2[0-9]|3[0-1])\/(20|21)) })
+       .remove();
 
 //Y axis
 var y = d3.scaleLinear()
