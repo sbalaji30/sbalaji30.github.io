@@ -57,7 +57,7 @@ svg.append("g")
     Tooltip
       .style("opacity", 1)
     d3.select(this)
-      .style("stroke", "black")
+      .style("stroke", "red")
       .style("opacity", 1)
   }
   var mousemove = function(d) {
@@ -68,10 +68,10 @@ svg.append("g")
   }
   var mouseleave = function(d) {
     Tooltip
-      .style("opacity", 0)
+      .style("opacity", 1)
     d3.select(this)
-      .style("stroke", "none")
-      .style("opacity", 0.8)
+      .style("stroke", "red")
+      .style("opacity", 1)
   }
 
 // Lines
