@@ -69,7 +69,7 @@ svg.append("g")
   }
   var mousemove = function(d) {
     Tooltip
-      .html("On " + d.date + " there were " + d.newCases + " new cases in the US.")
+      .html(d.date + ":" + "<br>New Cases: " + d.newCases + "<br>Total Cases: " + d.totalCases)
       .style("left", (d3.mouse(this)[0]+70) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
@@ -162,7 +162,7 @@ svg.append("g")
   }
   var mousemove = function(d) {
     Tooltip
-      .html("On " + d.date + " there were " + d.newDeaths + " new deaths in the US.")
+      .html(d.date + ":" + "<br>New Deaths: " + d.newDeaths + "<br>Total Deaths: " + d.totalDeaths)
       .style("left", (d3.mouse(this)[0]+70) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
