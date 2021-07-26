@@ -26,9 +26,9 @@ div.tooltip {
 <h1> CS 416 Narrative Visualization Project - Sharanya Balaji</h1>
 <p> This interactive slideshow will iterate through daily confirmed Coronavirus cases, daily deaths, and daily vaccinations. </p>
 
-<button onclick="reportedCases()">New Reported Cases</button>
-<button onclick="reportedDeaths()">New Reported Deaths By Day</button>
-<button onclick="reportedVaccines()">New Reported Doses By Day</button>
+<button onclick="reportedCases()">1. New Reported Cases</button>
+<button onclick="reportedDeaths()">2. New Reported Deaths By Day</button>
+<button onclick="reportedVaccines()">3. New Reported Doses By Day</button>
 
 <div id="new_reported_cases"></div>
 <div id="new_reported_deaths"></div>
@@ -97,7 +97,7 @@ var Tooltip = d3.select("#new_reported_cases").append("div")
       .style("opacity", 0)
     d3.select(this)
       .style("stroke", "red")
-      .style("opacity", 0.6)
+      .style("opacity", 0.4)
   }
 
 // Lines
@@ -110,7 +110,7 @@ svg.selectAll("myline")
     .attr("y1", function(d) { return y(d.newCases); })
     .attr("y2", y(0))
     .attr("stroke", "red")
-    .attr("opacity", 0.6)
+    .attr("opacity", 0.4)
   .on("mouseover", mouseover)
   .on("mousemove", mousemove)
   .on("mouseleave", mouseleave)
@@ -146,7 +146,7 @@ d3.selectAll("#new_reported_deaths > *").remove();
 d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
-    width = 1680,
+    width = 1000,
     height = 500;
 
 var svg = d3.select("#new_reported_deaths")
@@ -198,7 +198,7 @@ var Tooltip = d3.select("#new_reported_deaths").append("div")
       .style("opacity", 0)
     d3.select(this)
       .style("stroke", "green")
-      .style("opacity", 0.6)
+      .style("opacity", 0.4)
   }
 
 // Lines
@@ -211,7 +211,7 @@ svg.selectAll("myline")
     .attr("y1", function(d) { return y(d.newDeaths); })
     .attr("y2", y(0))
     .attr("stroke", "green")
-    .attr("opacity", 0.6)
+    .attr("opacity", 0.4)
   .on("mouseover", mouseover)
   .on("mousemove", mousemove)
   .on("mouseleave", mouseleave)
@@ -247,7 +247,7 @@ d3.selectAll("#new_reported_deaths > *").remove();
 d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
-    width = 1680,
+    width = 1000,
     height = 500;
 
 var svg = d3.select("#new_reported_vaccines")
@@ -298,7 +298,7 @@ var Tooltip = d3.select("#new_reported_vaccines").append("div")
       .style("opacity", 0)
     d3.select(this)
       .style("stroke", "blue")
-      .style("opacity", 0.6)
+      .style("opacity", 0.4)
   }
 
 // Lines
@@ -311,7 +311,7 @@ svg.selectAll("myline")
     .attr("y1", function(d) { return y(d.newVaccines); })
     .attr("y2", y(0))
     .attr("stroke", "blue")
-    .attr("opacity", 0.6)
+    .attr("opacity", 0.4)
   .on("mouseover", mouseover)
   .on("mousemove", mousemove)
   .on("mouseleave", mouseleave)
