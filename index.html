@@ -52,7 +52,7 @@ var svg = d3.select("#new_reported_cases")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
       .call(makeAnnotations);
 
 d3.csv("https://raw.githubusercontent.com/sbalaji30/sbalaji30.github.io/main/NarrativeVisualizationProjectDataset.csv", function(data) {
