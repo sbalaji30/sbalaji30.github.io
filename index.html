@@ -75,7 +75,9 @@ svg.append("g")
 
 var Tooltip = d3.select("#new_reported_cases").append("div")
   .attr("class","tooltip")
+  .style("background","mistyrose")
   .style("opacity",0);
+
 
 
   // Three function that change the tooltip when user hover / move / leave a cell
@@ -177,6 +179,7 @@ svg.append("g")
 
 var Tooltip = d3.select("#new_reported_deaths").append("div")
   .attr("class","tooltip")
+  .style("background","thistle")
   .style("opacity",0);
 
   // Three function that change the tooltip when user hover / move / leave a cell
@@ -277,6 +280,7 @@ svg.append("g")
 
 var Tooltip = d3.select("#new_reported_vaccines").append("div")
   .attr("class","tooltip")
+  .style("background","lightcyan")
   .style("opacity",0);
 
   // Three function that change the tooltip when user hover / move / leave a cell
