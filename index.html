@@ -38,7 +38,9 @@ div.tooltip {
 
 function reportedCases() {
 
-d3.selectAll("svg > *").remove();
+d3.selectAll("#new_reported_cases > *").remove();
+d3.selectAll("#new_reported_deaths > *").remove();
+d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
@@ -139,8 +141,9 @@ svg.selectAll(".annotation")
 
 function reportedDeaths() {
 
-d3.selectAll("svg > *").remove();
-
+d3.selectAll("#new_reported_cases > *").remove();
+d3.selectAll("#new_reported_deaths > *").remove();
+d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
@@ -239,7 +242,9 @@ svg.selectAll(".annotation")
 
 function reportedVaccines() {
 
-d3.selectAll("svg > *").remove();
+d3.selectAll("#new_reported_cases > *").remove();
+d3.selectAll("#new_reported_deaths > *").remove();
+d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
