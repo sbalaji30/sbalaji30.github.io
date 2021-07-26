@@ -3,6 +3,25 @@
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 
+<style>
+
+body { font: 12px Arial; }
+
+div.tooltip {
+  position: absolute;
+  text-align: center,
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+</style>
+
 <body>
 <h1> CS 416 Narrative Visualization Project - Sharanya Balaji</h1>
 <p> This interactive slideshow will iterate through daily confirmed Coronavirus cases, daily deaths, and daily vaccinations. </p>
@@ -55,16 +74,10 @@ var y = d3.scaleLinear()
 svg.append("g")
    .call(d3.axisLeft(y).tickSize(0));
 
-// create a tooltip
-  var Tooltip = d3.select("#new_reported_cases")
-    .append("tool")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
+var Tooltip = d3.select("#new_reported_cases").append("div")
+  .attr("class","tooltip")
+  .style("opacity",0);
+
 
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {
