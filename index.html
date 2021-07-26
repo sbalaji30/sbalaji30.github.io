@@ -117,7 +117,7 @@ svg.selectAll("circle")
 svg.selectAll("line")
   .transition()
   .duration(2000)
-  .attr("x1", function(d) { return x(d.newCases); })
+  .attr("y1", function(d) { return x(d.newCases); })
 
 })
 
