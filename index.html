@@ -19,6 +19,9 @@
 
 function reportedCases() {
 
+d3.select("#new_reported_cases").html="";
+d3.select("#new_reported_deaths").html="";
+d3.select("#new_reported_vaccines").html="";
 
 
 var margin = {top:10, right:10, bottom:60, left:100},
@@ -117,7 +120,7 @@ svg.selectAll(".annotation")
     .attr("class", "annotation")
     .attr("x", function(d) { return x("1/8/21"); })
     .attr("y", function(d) { return y("300777"); })
-    .text("January 8, 2021:<br>The highest number of new recorded cases<br>in the United States.")
+    .text("January 8, 2021: The highest number of new recorded cases in the United States.")
 
 
 })
@@ -125,6 +128,10 @@ svg.selectAll(".annotation")
 }
 
 function reportedDeaths() {
+
+d3.select("#new_reported_cases").html="";
+d3.select("#new_reported_deaths").html="";
+d3.select("#new_reported_vaccines").html="";
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
@@ -221,7 +228,7 @@ svg.selectAll(".annotation")
     .attr("class", "annotation")
     .attr("x", function(d) { return x("2/12/21"); })
     .attr("y", function(d) { return y("5463"); })
-    .text("February 12, 2021:<br>The highest number of new recorded deaths<br>in the United States.")
+    .text("February 12, 2021: The highest number of new recorded deaths in the United States.")
 
 })
 
@@ -229,6 +236,10 @@ svg.selectAll(".annotation")
 }
 
 function reportedVaccines() {
+
+d3.select("#new_reported_cases").html="";
+d3.select("#new_reported_deaths").html="";
+d3.select("#new_reported_vaccines").html="";
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
@@ -324,7 +335,7 @@ svg.selectAll(".annotation")
     .attr("class", "annotation")
     .attr("x", function(d) { return x("4/10/21"); })
     .attr("y", function(d) { return y("4629928"); })
-    .text("April 10, 2021:<br>The highest number of recorded doses administered<br>in the United States.")
+    .text("April 10, 2021: The highest number of recorded doses administered in the United States.")
 })
 
 
