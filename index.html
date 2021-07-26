@@ -117,7 +117,7 @@ svg.selectAll(".annotation")
     .attr("class", "annotation")
     .attr("x", function(d) { return x("1/8/21"); })
     .attr("y", function(d) { return y("300777"); })
-    .text("January 8, 2021: The highest number of new recorded cases.")
+    .text("January 8, 2021: The highest number of new recorded cases in the United States.")
 
 
 })
@@ -151,7 +151,7 @@ svg.append("g")
 
 //Y axis
 var y = d3.scaleLinear()
-   .domain([0,5000])
+   .domain([0,6000])
    .range([height,0]);
 svg.append("g")
    .call(d3.axisLeft(y).tickSize(0));
@@ -213,6 +213,16 @@ svg.selectAll("mycircle")
     .attr("r", "0.1")
     .style("fill", "#69b3a2")
     .attr("stroke", "green")
+
+svg.selectAll(".annotation")
+  .data(data)
+  .enter()
+    .append("text")
+    .attr("class", "annotation")
+    .attr("x", function(d) { return x("2/12/21"); })
+    .attr("y", function(d) { return y("5463"); })
+    .text("February 12, 2021: The highest number of new recorded deaths in the United States.")
+
 })
 
 
@@ -306,6 +316,15 @@ svg.selectAll("mycircle")
     .attr("r", "0.1")
     .style("fill", "#69b3a2")
     .attr("stroke", "blue")
+
+svg.selectAll(".annotation")
+  .data(data)
+  .enter()
+    .append("text")
+    .attr("class", "annotation")
+    .attr("x", function(d) { return x("4/10/21"); })
+    .attr("y", function(d) { return y("4629928"); })
+    .text("April 10, 2021: The highest number of recorded doses administered.")
 })
 
 
