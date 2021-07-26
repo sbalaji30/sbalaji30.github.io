@@ -302,7 +302,7 @@ var Tooltip = d3.select("#new_reported_vaccines").append("div")
       .style("opacity", 0)
     d3.select(this)
       .style("stroke", "lightseagreen")
-      .style("opacity", 0.4)
+      .style("opacity", 0.6)
   }
 
 // Lines
@@ -315,7 +315,7 @@ svg.selectAll("myline")
     .attr("y1", function(d) { return y(d.newVaccines); })
     .attr("y2", y(0))
     .attr("stroke", "lightseagreen")
-    .attr("opacity", 0.4)
+    .attr("opacity", 0.6)
   .on("mouseover", mouseover)
   .on("mousemove", mousemove)
   .on("mouseleave", mouseleave)
