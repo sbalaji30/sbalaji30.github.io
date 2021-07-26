@@ -7,13 +7,15 @@
 <h1> CS 416 Narrative Visualization Project - Sharanya Balaji</h1>
 <p> This interactive slideshow will iterate through daily confirmed Coronavirus cases, daily deaths, and daily vaccinations. </p>
 
-<button>New Reported Cases</button>
+<button onclick="reportedCases()">New Reported Cases</button>
 <button>New Reported Deaths By Day</button>
-<button>New Vaccinations By Day</button>
+<button>New Reported Doses By Day</button>
 
 <div id="new_reported_cases"></div>
 
 <script>
+
+function reportedCases() {
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
@@ -103,6 +105,8 @@ svg.selectAll("mycircle")
     .style("fill", "#69b3a2")
     .attr("stroke", "red")
 })
+
+}
 
 </script>
 
