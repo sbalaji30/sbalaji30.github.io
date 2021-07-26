@@ -110,6 +110,15 @@ svg.selectAll("mycircle")
     .style("fill", "#69b3a2")
     .attr("stroke", "red")
 
+svg.selectAll(".annotation")
+  .data(data)
+  .enter()
+    .append("text")
+    .attr("class", "annotation")
+    .attr("x", function(d) { return x("1/8/21"); })
+    .attr("y", function(d) { return y("300777"); })
+    .text("January 8, 2021: The highest number of new recorded cases.")
+
 
 })
 
