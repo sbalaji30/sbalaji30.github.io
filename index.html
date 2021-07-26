@@ -2,6 +2,7 @@
 <meta charset="utf-8">
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 
 <body>
 <h1> CS 416 Narrative Visualization Project - Sharanya Balaji</h1>
@@ -19,6 +20,29 @@
 
 function reportedCases() {
 
+const annotations = [
+  {
+    note: {
+      label: "Highest number of new reported cases recorded",
+      title: "January 8, 2021"
+    },
+    connector: {
+      end: "dot",        
+      type: "line",      
+      lineType : "vertical",   
+      endScale: 10 
+    },
+    color: ["grey"],
+    x: 40,
+    y: 160,
+    dy: 70,
+    dx: 70
+  }
+]
+
+const makeAnnotations = d3.annotation().annotations(annotations)
+
+
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
     height = 500;
@@ -29,6 +53,7 @@ var svg = d3.select("#new_reported_cases")
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .call(makeAnnotations);
 
 d3.csv("https://raw.githubusercontent.com/sbalaji30/sbalaji30.github.io/main/NarrativeVisualizationProjectDataset.csv", function(data) {
 
