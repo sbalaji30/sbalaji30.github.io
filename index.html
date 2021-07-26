@@ -11,7 +11,7 @@ div.tooltip {
   position: absolute;
   text-align: center,
   width: 60px;
-  height: 28px;
+  height: 40px;
   padding: 2px;
   font: 12px sans-serif;
   background: lightsteelblue;
@@ -176,16 +176,9 @@ var y = d3.scaleLinear()
 svg.append("g")
    .call(d3.axisLeft(y).tickSize(0));
 
-// create a tooltip
-  var Tooltip = d3.select("#new_reported_deaths")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
+var Tooltip = d3.select("#new_reported_deaths").append("div")
+  .attr("class","tooltip")
+  .style("opacity",0);
 
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {
@@ -283,16 +276,9 @@ var y = d3.scaleLinear()
 svg.append("g")
    .call(d3.axisLeft(y).tickSize(0));
 
-// create a tooltip
-  var Tooltip = d3.select("#new_reported_vaccines")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
+var Tooltip = d3.select("#new_reported_vaccines").append("div")
+  .attr("class","tooltip")
+  .style("opacity",0);
 
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {
