@@ -38,7 +38,7 @@ div.tooltip {
 
 function reportedCases() {
 
-d3.select("svg").selectAll("*").remove();
+d3.selectAll("svg > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
@@ -139,7 +139,8 @@ svg.selectAll(".annotation")
 
 function reportedDeaths() {
 
-d3.select("svg").selectAll("*").remove();
+d3.selectAll("svg > *").remove();
+
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
@@ -238,7 +239,7 @@ svg.selectAll(".annotation")
 
 function reportedVaccines() {
 
-d3.select("svg").selectAll("*").remove();
+d3.selectAll("svg > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1680,
