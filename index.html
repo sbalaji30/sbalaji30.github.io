@@ -44,7 +44,7 @@ d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1000,
-    height = 500;
+    height = 1000;
 
 var svg = d3.select("#new_reported_cases")
     .append("svg")
@@ -69,7 +69,7 @@ svg.append("g")
 //Y axis
 var y = d3.scaleLinear()
    .domain([0,307000])
-   .range([height,0]);
+   .range([500,0]);
 svg.append("g")
    .call(d3.axisLeft(y).tickSize(0));
 
@@ -174,6 +174,10 @@ svg.append("text")
      .style("text-decoration", "underline")
      .text("New Reported Cases By Day")
 
+svg.append("text")
+     .attr("transform", "translate(0," + 500 + ")")
+     .attr("font-size", "12px")
+     .text("testing text")
 })
 
 }
