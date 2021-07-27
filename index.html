@@ -190,7 +190,7 @@ d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1000,
-    height = 500;
+    height = 1000;
 
 var svg = d3.select("#new_reported_deaths")
     .append("svg")
@@ -207,14 +207,14 @@ var x = d3.scaleBand()
    .domain(data.map(function(d) { return d.date; }))
    .padding(1);
 svg.append("g")
-   .attr("transform", "translate(0," + height + ")")
+   .attr("transform", "translate(0," + 500 + ")")
    .call(d3.axisBottom(x).tickSize(0))
    .selectAll("text").data(data).filter(function (d) { return d.date.match(/([1-9]|1[0-2])\/([2-9]|1[0-9]|2[0-9]|3[0-1])\/(20|21)/); }).attr("opacity","0");
 
 //Y axis
 var y = d3.scaleLinear()
    .domain([0,6000])
-   .range([height,0]);
+   .range([500,0]);
 svg.append("g")
    .call(d3.axisLeft(y).tickSize(0));
 
@@ -316,6 +316,11 @@ svg.append("text")
      .style("text-decoration", "underline")
      .text("New Reported Deaths By Day")
 
+svg.append("text")
+     .attr("transform", "translate(0," + 550 + ")")
+     .attr("font-size", "14px")
+     .text("On July 24, 2021, 101 new deaths were reported. This daily report is a 98.15% decrease from the peak of 5,463 new deaths reported on February 12, 2021.")
+
 })
 
 
@@ -329,7 +334,7 @@ d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1000,
-    height = 500;
+    height = 1000;
 
 var svg = d3.select("#new_reported_vaccines")
     .append("svg")
@@ -345,14 +350,14 @@ var x = d3.scaleBand()
    .domain(data.map(function(d) { return d.date; }))
    .padding(1);
 svg.append("g")
-   .attr("transform", "translate(0," + height + ")")
+   .attr("transform", "translate(0," + 500 + ")")
    .call(d3.axisBottom(x).tickSize(0))
    .selectAll("text").data(data).filter(function (d) { return d.date.match(/([1-9]|1[0-2])\/([2-9]|1[0-9]|2[0-9]|3[0-1])\/(20|21)/); }).attr("opacity","0");
 
 //Y axis
 var y = d3.scaleLinear()
    .domain([0,4800000])
-   .range([height,0]);
+   .range([500,0]);
 svg.append("g")
    .call(d3.axisLeft(y).tickSize(0));
 
@@ -433,6 +438,12 @@ svg.append("text")
      .style("font-size","16px")
      .style("text-decoration", "underline")
      .text("New Reported Doses By Day")
+
+svg.append("text")
+     .attr("transform", "translate(0," + 550 + ")")
+     .attr("font-size", "14px")
+     .text("On July 24, 2021, 676,050 new doses were administered. This daily report is a 85.3% decrease from the peak of 4,629,928 new doses administered on April 13, 2021.")
+
 })
 
 
