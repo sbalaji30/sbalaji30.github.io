@@ -333,7 +333,7 @@ svg.append("g")
 
 //Y axis
 var y = d3.scaleLinear()
-   .domain([0,4700000])
+   .domain([0,4800000])
    .range([height,0]);
 svg.append("g")
    .call(d3.axisLeft(y).tickSize(0));
@@ -374,7 +374,7 @@ svg.selectAll("myline")
     .attr("x2", function(d) { return x(d.date); })
     .attr("y1", function(d) { return y(d.newVaccines); })
     .attr("y2", y(0))
-    .attr("stroke", "lightseagreen")
+    .attr("stroke", function(d) { if ((d.date === "4/10/21")) { return "black"; } else { return "lightseagreen"; }})
     .attr("opacity", 0.6)
   .on("mouseover", mouseover)
   .on("mousemove", mousemove)
@@ -396,8 +396,19 @@ svg.selectAll(".annotation")
     .append("text")
     .attr("class", "annotation")
     .attr("x", function(d) { return x("4/10/21"); })
-    .attr("y", function(d) { return y("4629928"); })
+    .attr("y", function(d) { return y("4729928"); })
     .text("Apr. 10 '21: Highest number of new doses")
+
+svg.selectAll("secNewLine")
+  .data(data)
+  .enter()
+  .append("line")
+    .attr("x1", function(d) { return x("4/10/21"); })
+    .attr("x2", function(d) { return x("7/1/21"); })
+    .attr("y1", y(4629928))
+    .attr("y2", y(4629928))
+    .attr("stroke", "darkgray")
+    .attr("opacity", 1)
 })
 
 
