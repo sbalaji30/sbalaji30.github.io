@@ -166,6 +166,16 @@ svg.selectAll("myannotation")
     .attr("y", function(d) { return y("182000"); })
     .text("Dec. 20 '20: 1st day of vaccines")
 
+svg.selectAll("mytitle")
+  .enter()
+     .append("text")
+     .attr("x", (width/2))
+     .attr("y", 0 - (margin.top/2))
+     .attr("text-anchor", "middle")
+     .style("font-size","16px")
+     .style("text-decoration", "underline")
+     .text("New Reported Cases By Day")
+
 })
 
 }
