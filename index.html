@@ -42,6 +42,8 @@ d3.selectAll("#new_reported_cases > *").remove();
 d3.selectAll("#new_reported_deaths > *").remove();
 d3.selectAll("#new_reported_vaccines > *").remove();
 
+d3.select("#new_reported_cases").append("text").text("New reported cases by day. Hover over data lines for more details.");
+
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1000,
     height = 500;
