@@ -216,7 +216,6 @@ var Tooltip = d3.select("#new_reported_deaths").append("div")
     Tooltip
       .style("opacity", 1)
     d3.select(this)
-      .style("stroke", "crimson")
       .style("opacity", 1)
   }
   var mousemove = function(d) {
@@ -229,7 +228,6 @@ var Tooltip = d3.select("#new_reported_deaths").append("div")
     Tooltip
       .style("opacity", 0)
     d3.select(this)
-      .style("stroke", "crimson")
       .style("opacity", 0.4)
   }
 
@@ -348,7 +346,6 @@ var Tooltip = d3.select("#new_reported_vaccines").append("div")
     Tooltip
       .style("opacity", 1)
     d3.select(this)
-      .style("stroke", "lightseagreen")
       .style("opacity", 1)
   }
   var mousemove = function(d) {
@@ -361,7 +358,6 @@ var Tooltip = d3.select("#new_reported_vaccines").append("div")
     Tooltip
       .style("opacity", 0)
     d3.select(this)
-      .style("stroke", "lightseagreen")
       .style("opacity", 0.6)
   }
 
