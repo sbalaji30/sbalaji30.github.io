@@ -26,9 +26,9 @@ div.tooltip {
 <h1 style="color:midnightblue;"> CS 416 Narrative Visualization Project - Sharanya Balaji</h1>
 <p style="color:darkgreen;"> The coronavirus pandemic has been one of the world’s largest crisis in modern time.<br><br>The first case of COVID-19 was reported from Wuhan, China on December 31, 2019. On January 20, 2020, the United States reported its first case of COVID-19.<br><br>Slowly but surely, cases were being confirmed in every nook and cranny of the world. 1 year, 6 months, and 23 days later, the world has reported 195,283,439 coronavirus cases and 4,181,867 deaths associated to this illness. The United States, alone, has reported 34,391,317 cases and 610,414 associated deaths.<br><br>After so many lives have been affected or lost, everyone wants to know when this pandemic can finally be put behind us. Everyone uses different criteria to hypothesize a response to this question.<br><br>In the following narrative visualization, I will highlight the United States trends of daily new confirmed cases, daily new confirmed deaths, and daily new administered doses to portray how the coronavirus has progressed in this country, allowing us to make our personal opinions on whether the end is near or not.</p>
 
-<p style="color:darkred;">This data is as of July 24, 2021 and was gathered from the following dataset: https://github.com/nytimes/covid-19-data.</p>
+<p style="color:teal;">This data is as of July 24, 2021 and was gathered from the following dataset: https://github.com/nytimes/covid-19-data.</p>
 
-<p style="color:dodgerblue;">Click on the below buttons to see the corresponding charts. Hover over the data lines for further information.</p>
+<p style="color:darkred;">Click on the below buttons to see the corresponding charts. Hover over the data lines for further information.</p>
 
 <button onclick="reportedCases()">1. New Reported Cases</button>
 <button onclick="reportedDeaths()">2. New Reported Deaths By Day</button>
@@ -48,7 +48,7 @@ d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1000,
-    height = 750;
+    height = 700;
 
 var svg = d3.select("#new_reported_cases")
     .append("svg")
@@ -194,7 +194,7 @@ d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1000,
-    height = 750;
+    height = 650;
 
 var svg = d3.select("#new_reported_deaths")
     .append("svg")
@@ -338,7 +338,7 @@ d3.selectAll("#new_reported_vaccines > *").remove();
 
 var margin = {top:10, right:10, bottom:60, left:100},
     width = 1000,
-    height = 750;
+    height = 650;
 
 var svg = d3.select("#new_reported_vaccines")
     .append("svg")
