@@ -84,8 +84,8 @@ var Tooltip = d3.select("#new_reported_cases").append("div")
   var mouseover = function(d) {
     Tooltip
       .style("opacity", 1)
-    d3.select(this)
-      .style("stroke", "mediumorchid")
+    d3.select(this).data(data)
+      .style("stroke", function(d) { if ((d.date === "1/8/21") || (d.date === "12/20/20")) { return "black"; } else { return "mediumorchid"; }})
       .style("opacity", 1)
   }
   var mousemove = function(d) {
@@ -97,8 +97,8 @@ var Tooltip = d3.select("#new_reported_cases").append("div")
   var mouseleave = function(d) {
     Tooltip
       .style("opacity", 0)
-    d3.select(this)
-      .style("stroke", "mediumorchid")
+    d3.select(this).data(data)
+      .style("stroke", function(d) { if ((d.date === "1/8/21") || (d.date === "12/20/20")) { return "black"; } else { return "mediumorchid"; }})
       .style("opacity", 0.4)
   }
 
