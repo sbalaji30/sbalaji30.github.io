@@ -168,7 +168,7 @@ svg.selectAll("myannotation")
 
 svg.append("text")
      .attr("x", (width/4))
-     .attr("y", 10)
+     .attr("y", 20)
      .attr("text-anchor", "middle")
      .style("font-size","16px")
      .style("text-decoration", "underline")
@@ -304,6 +304,14 @@ svg.selectAll("myannotation")
     .attr("y", function(d) { return y("1529"); })
     .text("Dec. 20 '20: 1st day of vaccines")
 
+svg.append("text")
+     .attr("x", (width/4))
+     .attr("y", 20)
+     .attr("text-anchor", "middle")
+     .style("font-size","16px")
+     .style("text-decoration", "underline")
+     .text("New Reported Deaths By Day")
+
 })
 
 
@@ -413,6 +421,14 @@ svg.selectAll("secNewLine")
     .attr("y2", y(4629928))
     .attr("stroke", "darkgray")
     .attr("opacity", 1)
+
+svg.append("text")
+     .attr("x", (width/4))
+     .attr("y", 20)
+     .attr("text-anchor", "middle")
+     .style("font-size","16px")
+     .style("text-decoration", "underline")
+     .text("New Reported Doses By Day")
 })
 
 
