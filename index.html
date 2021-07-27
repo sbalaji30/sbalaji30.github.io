@@ -61,7 +61,7 @@ var x = d3.scaleBand()
    .domain(data.map(function(d) { return d.date; }))
    .padding(1);
 svg.append("g")
-   .attr("transform", "translate(0," + height + ")")
+   .attr("transform", "translate(0," + 500 + ")")
    .call(d3.axisBottom(x).tickSize(0))
    .selectAll("text").data(data).filter(function (d) { return d.date.match(/([1-9]|1[0-2])\/([2-9]|1[0-9]|2[0-9]|3[0-1])\/(20|21)/); }).attr("opacity","0");
 
@@ -175,7 +175,7 @@ svg.append("text")
      .text("New Reported Cases By Day")
 
 svg.append("text")
-     .attr("transform", "translate(0," + 500 + ")")
+     .attr("transform", "translate(0," + 550 + ")")
      .attr("font-size", "12px")
      .text("testing text")
 })
